@@ -25,6 +25,8 @@ public class E_01_01 {
 		System.out.println("初めてのJavaプログラム");
 		// セミコロンが欠如しているとどうなるか検証
 		System.out.println("画面に出力しています")
+		
+        //構文エラーがあります。";" を挿入して Statement を完了してください
 
 	}
 
