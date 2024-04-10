@@ -22,18 +22,18 @@ public class E_02_03 {
 	*/
 
 	public static void main(String[] args) {
-	// TODO 自動生成されたメソッド・スタブ
-	
-	// 引数で標準入力System.inを指定
-	Scanner stdIn = new Scanner(System.in);
-	
-	// 整数値の入力を促す
-	System.out.print("整数値：");
-	// 入力された整数値を読み込む
-	int firstVariable = stdIn.nextInt();
-	
-	// 入力された整数値を表示
-	System.out.println(firstVariable +"と入力しましたね。");
+		// TODO 自動生成されたメソッド・スタブ
+		
+		// 引数で標準入力System.inを指定
+		Scanner standardInput = new Scanner(System.in);
+		
+		// 整数値の入力を促す
+		System.out.print("整数値：");
+		// 入力された整数値を読み込む
+		int firstVariable = standardInput.nextInt();
+		
+		// 入力された整数値を表示
+		System.out.println(firstVariable +"と入力しましたね。");
 
 	}
 

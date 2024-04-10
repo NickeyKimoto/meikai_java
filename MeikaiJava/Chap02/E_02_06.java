@@ -24,25 +24,23 @@ public class E_02_06 {
 	public static void main(String[] args) {
 	// TODO 自動生成されたメソッド・スタブ
 	
-	// 引数で標準入力System.inを指定
-	Scanner stdIn = new Scanner(System.in);
-	
-	// プログラムの内容を表示
-	System.out.println("三角形の面積を求めます。");
-	
-	// 底辺の値の入力を促す
-	System.out.print("底辺：");
-	// 入力された値を読み込む
-	double triangleBase = stdIn.nextDouble();
-	
-	// 高さの値の入力を促す
-	System.out.print("高さ：");
-	// 入力された値を読み込む
-	double triangleHeight = stdIn.nextDouble();
-	
-	
-	// 入力された値の三角形の面積を表示
-	System.out.println("面積は" + triangleBase * triangleHeight / 2 + "です。");
+		Scanner standardInput = new Scanner(System.in);
+		
+		// プログラムの内容を表示
+		System.out.println("三角形の面積を求めます。");
+		
+		// 底辺の値の入力を促す
+		System.out.print("底辺：");
+		// 入力された底辺の値を読み込む
+		double triangleBase = standardInput.nextDouble();
+		
+		// 高さの値の入力を促す
+		System.out.print("高さ：");
+		// 入力された高さの値を読み込む
+		double triangleHeight = standardInput.nextDouble();
+		
+		// 入力された値の三角形の面積を表示
+		System.out.println("面積は" + triangleBase * triangleHeight / 2 + "です。");
 
 	}
 

@@ -6,7 +6,7 @@ package MeikaiJava.Chap02;
 *作成者：N.Kimoto
 *作成日：2024/04/04
 */
-
+	
 //Javaでキーボードから標準入力を取得するために必要なScannerクラスをインポート
 import java.util.Scanner;
 
@@ -25,12 +25,12 @@ public class E_02_04 {
 		// TODO 自動生成されたメソッド・スタブ
 		
 		// 引数で標準入力System.inを指定
-		Scanner stdIn = new Scanner(System.in);
+		Scanner standardInput = new Scanner(System.in);
 		
 		// 整数値の入力を促す
 		System.out.print("整数値：");
 		// 入力された整数値を読み込む
-		int firstVariable = stdIn.nextInt();
+		int firstVariable = standardInput.nextInt();
 		
 		// 入力された値に10を加えた値を表示
 		System.out.println("10を加えた値は" + (firstVariable + 10) + "です。");

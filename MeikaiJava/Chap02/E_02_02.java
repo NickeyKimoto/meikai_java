@@ -18,15 +18,14 @@ public class E_02_02 {
 	*作成日：2024/04/04
 	*/
 
-
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+	// TODO 自動生成されたメソッド・スタブ
 		
-		// int型の変数に値を代入
+		// int型の変数に一つ目の整数を代入
 		int firstVariable = 63;
-		// int型の変数に値を代入
+		// int型の変数に二つ目の整数を代入
 		int secondVariable = 18;
-		// int型の変数に値を代入
+		// int型の変数に三つ目の整数を代入
 		int thirdVariable = 41;
 		
 		// 合計を表示
