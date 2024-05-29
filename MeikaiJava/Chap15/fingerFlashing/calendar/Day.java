@@ -1,4 +1,4 @@
-package MeikaiJava.Chap10.day4;
+package MeikaiJava.Chap15.fingerFlashing.calendar;
 
 /*
 *クラス名：Day
@@ -90,6 +90,9 @@ public class Day {
 	
 	public Day(int year) {
 		
+		// プログラム実行時の日付を取得
+		GregorianCalendar today = new GregorianCalendar();
+		
 		// 受け取った年の引数が最小値を下回る場合
 		if (year < MINIMUM_YEAR) {
 			
@@ -99,6 +102,10 @@ public class Day {
 		}
 		// 年を表すインスタンス変数を引数で初期化
 		this.year = year;
+		// 月を表すインスタンス変数をプログラム実行時の日付で初期化
+		this.month = today.get(MONTH) + ADJUST_MONTH_NOTATION;
+		// 日を表すインスタンス変数をプログラム実行時の日付で初期化
+		this.date = today.get(DATE);
 		
 	}
 	
@@ -112,6 +119,9 @@ public class Day {
 	*/
 	
 	public Day(int year, int month) {
+		
+		// プログラム実行時の日付を取得
+		GregorianCalendar today = new GregorianCalendar();
 		
 		// 受け取った年の引数が最小値を下回る場合
 		if (year < MINIMUM_YEAR) {
@@ -138,6 +148,8 @@ public class Day {
 		}
 		// 月を表すインスタンス変数を引数で初期化
 		this.month = month;
+		// 日を表すインスタンス変数をプログラム実行時の日付で初期化
+		this.date = today.get(DATE);
 		
 	}
 	
@@ -377,7 +389,7 @@ public class Day {
 		// その月の最大日数を格納した配列を宣言
 		final int[] MAXIMUM_DAYS_OF_MONTH = {31, isLeap(inputYear) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		// インデックス番号を引数の年と月に対応する箇所に調整し、最大日数を返却
-		return MAXIMUM_DAYS_OF_MONTH[inputMonth--];
+		return MAXIMUM_DAYS_OF_MONTH[--inputMonth];
 		
 	}
 	
@@ -415,6 +427,56 @@ public class Day {
 				CONDITIONS_CONSTANT_LEAP_YEAR[2] + (SHIFT_IN_DAYS_OF_WEEK[2] * m + 
 						SHIFT_IN_DAYS_OF_WEEK[1]) / SHIFT_IN_DAYS_OF_WEEK[0] + date) % SAME_DAY_OF_THE_WEEK;
 		
+	}
+	
+	/*
+	*関数名：displayCalendar
+	*概要：その日付のカレンダーを表示
+	*引数：日付(Day型)
+	*戻り値：なし
+	*作成者：N.Kimoto
+	*作成日：2024/05/28
+	*/
+	public void displayCalendar(Day specifyDay) {
+		// その月の日数を格納する配列を宣言
+		int[] dateNumber = new int[findMaximumDaysOfMonth(specifyDay.getYear(), specifyDay.getMonth())];
+		// 表示するカレンダーの月を表示
+		System.out.println("[" + specifyDay.getYear() + "年" + specifyDay.getMonth() + "月]");
+		// 各曜日を表示
+		System.out.println(" 日 月 火 水 木 金 土");
+		// 配列に日付を代入する
+		for (int i = 0; i < dateNumber.length; i++) {
+			// 代入する値を初期化
+			int inputDate = i;
+			// 値を代入
+			dateNumber[i] = ++inputDate;
+		}
+		
+		// カレンダーを表示
+		for (int i = 0; i < dateNumber.length; i++) {
+			// 表示する日付を初期化
+			Day displayDay = new Day(specifyDay.getYear(), specifyDay.getMonth(), dateNumber[i]);
+			// その月の初日の場合
+			if (i == 0) {
+				// 該当する曜日に表示を調整する
+				for (int j = 0; j < displayDay.day0fWeek(); j++) {
+					// スペースを表示
+					System.out.print("   ");
+				}
+			}
+			
+			// 日付を表示
+			System.out.printf("%3d",dateNumber[i]);
+			// 土曜日を表す定数を宣言
+			final int SATURDAY_VARUE = 6;
+			// 表示した日付が土曜日だった場合
+			if (displayDay.day0fWeek() == SATURDAY_VARUE) {
+				// 改行する
+				System.out.println();
+			}
+		}
+		// 一行空ける
+		System.out.println("\n");
 	}
 	
 	/*

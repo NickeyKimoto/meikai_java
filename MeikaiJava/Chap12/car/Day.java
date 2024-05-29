@@ -1,4 +1,4 @@
-package MeikaiJava.Chap10.day4;
+package MeikaiJava.Chap12.car;
 
 /*
 *クラス名：Day
