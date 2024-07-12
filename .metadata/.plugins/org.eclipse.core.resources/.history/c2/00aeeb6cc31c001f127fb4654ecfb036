@@ -1,0 +1,10 @@
+package MeikaiJava.List.Chap15;
+// 文字列を扱うプログラム
+public class L_15_Last1 {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+}

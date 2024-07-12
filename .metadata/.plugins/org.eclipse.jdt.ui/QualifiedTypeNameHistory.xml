@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+    <fullyQualifiedTypeName name="MeikaiJava.Chap11.id.RandId"/>
+    <fullyQualifiedTypeName name="MeikaiJava.Chap10.id1.Id"/>
+    <fullyQualifiedTypeName name="id.DateId"/>
+    <fullyQualifiedTypeName name="MeikaiJava.List.Chap11.point.Point2D"/>
+    <fullyQualifiedTypeName name="point.Point2D"/>
+    <fullyQualifiedTypeName name="Chap11.point.Point2D"/>
+</qualifiedTypeNameHistroy>
